@@ -8,13 +8,10 @@ function Mainrouter() {
   return (
     <React.Fragment>
       {/* ============== Switch Routes to the first matched url ============== */}
-      {/* Which is the url in which the requested '/' , '/about' , '/users' is occuring first */}
       <Switch>
-        {/* <Route path="/" component={Home} /> */}
-        <Route path="/about" component={About} />
-        <Route path="/users" component={Users} />
-        <Route path="/" component={Home} />
-        {/* if we use this code above everymatch will be for / */}
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/users" component={Users} />
       </Switch>
 
       {/* ============== Switch with exact ============== */}
@@ -23,26 +20,20 @@ function Mainrouter() {
         <Route path="/about" component={About} />
         <Route path="/users" component={Users} />
       </Switch> */}
-
       {/* ============== Router Routes us to all matched urls ============== */}
-
-      {/* <Route path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/users" component={Users} /> */}
-
+      {/* <Route path="/" component={Home} /> Will render /  */}
+      {/* <Route path="/about" component={About} /> Will render / and /about */}
+      {/* <Route path="/users" component={Users} /> Will render / and /users */}
       {/* ============== Router with exact ============== */}
-
-      {/* *before adding exact */}
+      {/* To avoid home to render on /about and /users using exact */}
       {/* <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/users" component={Users} /> */}
-
       {/* ============== Router with /:id ============== */}
       {/* Ex : https://www.flipkart.com/smart-watches/23102 */}
-
       {/* <Route path="/" component={Home} />
       <Route path="/about" component={About} />
-      <Route path={`/users/:userId`} component={Users} /> */}
+      <Route path={`/users/:userId`} component={Users} />  if time permits*/}
     </React.Fragment>
   );
 }

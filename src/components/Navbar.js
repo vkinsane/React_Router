@@ -1,46 +1,18 @@
 import React, { useState } from "react";
 import { Link, Redirect } from "react-router-dom";
-function Navbar() {
-  const [logout, setLogout] = useState(false);
+import { Nav, Navbar } from "react-bootstrap";
+function MainNavbar() {
+  // const [logout, setLogout] = useState(false);
   return (
-    <nav>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/users">Users</Link>
-          {/* <Link to="/users/1">Users</Link> */}
-        </li>
-      </ul>
-      {/* For redirect concept */}
-      {logout === true && (
-        <button
-          onClick={() => {
-            setLogout(false);
-            console.log("User Logged In 👍");
-          }}
-        >
-          Login
-        </button>
-      )}
-
-      {logout === false && (
-        <button
-          onClick={() => {
-            setLogout(true);
-            console.log("User Logged Out 👋");
-          }}
-        >
-          Logout
-        </button>
-      )}
-      {logout && <Redirect to="/" />}
-    </nav>
+    <Navbar bg="dark" variant="dark">
+      <Navbar.Brand>React Router</Navbar.Brand>
+      <Nav className="mr-auto">
+        <Nav.Link href="/">Home</Nav.Link>
+        <Nav.Link href="/about">About</Nav.Link>
+        <Nav.Link href="/users">Users</Nav.Link>
+      </Nav>
+    </Navbar>
   );
 }
 
-export default Navbar;
+export default MainNavbar;
