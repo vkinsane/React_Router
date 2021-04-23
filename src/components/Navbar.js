@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import React from "react";
 import { Nav, Navbar } from "react-bootstrap";
 function MainNavbar() {
   // const [logout, setLogout] = useState(false);

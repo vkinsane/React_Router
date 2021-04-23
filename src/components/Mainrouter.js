@@ -1,5 +1,6 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
+// import { Link, Redirect } from "react-router-dom";
 import About from "./About.js";
 import Home from "./Home.js";
 import Users from "./Users.js";
@@ -7,7 +8,7 @@ import Users from "./Users.js";
 function Mainrouter() {
   return (
     <React.Fragment>
-      {/* ============== Switch Routes to the first matched url ============== */}
+      {/* ============== Switch Routes to the first matched url only ============== */}
       <Switch>
         <Route path="/about" component={About} />
         <Route path="/users" component={Users} />
@@ -21,19 +22,20 @@ function Mainrouter() {
         <Route path="/users" component={Users} />
       </Switch> */}
       {/* ============== Router Routes us to all matched urls ============== */}
-      {/* <Route path="/" component={Home} /> Will render /  */}
-      {/* <Route path="/about" component={About} /> Will render / and /about */}
-      {/* <Route path="/users" component={Users} /> Will render / and /users */}
+      {/* <Route path="/" component={Home} />
+      <Route path="/about" component={About} />
+      <Route path="/users" component={Users} /> */}
       {/* ============== Router with exact ============== */}
       {/* To avoid home to render on /about and /users using exact */}
       {/* <Route exact path="/" component={Home} />
       <Route path="/about" component={About} />
       <Route path="/users" component={Users} /> */}
-      {/* ============== Router with /:id ============== */}
+
+      {/* ============== Router with `/:age` ============== */}
       {/* Ex : https://www.flipkart.com/smart-watches/23102 */}
       {/* <Route path="/" component={Home} />
       <Route path="/about" component={About} />
-      <Route path={`/users/:age`} component={Users} />  if time permits*/}
+      <Route path={`/users/:age`} component={Users} /> */}
     </React.Fragment>
   );
 }
