@@ -6,10 +6,12 @@ import MainNavbar from "./components/Navbar";
 
 export default function App() {
   return (
-    <Router>
-      {/* Navbar should be displayed on every page */}
+    <React.Fragment>
+      {/* Navbar is displayed on every page */}
       <MainNavbar />
-      <Mainrouter />
-    </Router>
+      <Router>
+        <Mainrouter />
+      </Router>
+    </React.Fragment>
   );
 }

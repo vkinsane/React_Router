@@ -9,9 +9,9 @@ function Mainrouter() {
     <React.Fragment>
       {/* ============== Switch Routes to the first matched url ============== */}
       <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/users" component={Users} />
+        <Route path="/about" component={About} />
+        <Route path="/users" component={Users} />
+        <Route path="/" component={Home} />
       </Switch>
 
       {/* ============== Switch with exact ============== */}
@@ -33,7 +33,7 @@ function Mainrouter() {
       {/* Ex : https://www.flipkart.com/smart-watches/23102 */}
       {/* <Route path="/" component={Home} />
       <Route path="/about" component={About} />
-      <Route path={`/users/:userId`} component={Users} />  if time permits*/}
+      <Route path={`/users/:age`} component={Users} />  if time permits*/}
     </React.Fragment>
   );
 }

@@ -1,4 +1,5 @@
 import React from "react";
+// import { useParams } from "react-router-dom";
 
 function User() {
   return (
@@ -6,8 +7,12 @@ function User() {
       <h1>Users</h1>
     </div>
   );
+  // let { age } = useParams(); //lets us use the params from the url for Users component
+  // if (age >= 21) {
+  //   return <h2>Eligible to Vote</h2>;
+  // } else {
+  //   return <h2>Not eligible to vote</h2>;
+  // }
 }
-//let { userId } = useParams(); //lets us use the params from the url for Users component
-// return <h2>User {userId}</h2>;
 
 export default User;
